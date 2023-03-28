@@ -42,3 +42,48 @@ function displayTasksByCategory(category) {
     console.log(task.name);
   });
 }
+
+// Korey's Changes
+
+let tasks = [
+  {
+    name: "Buy groceries",
+    due_date: "2023-03-24",
+    priority: 2,
+    notes: "Remember to buy milk, bread, and eggs",
+    completed: false,
+    category: "Personal",
+  },
+  {
+    name: "Study Javascript",
+    due_date: "2023-03-24",
+    priority: 2,
+    notes: "Remember to buy milk, bread, and eggs",
+    completed: false,
+    category: "Microsoft",
+  },
+];
+
+function addTask(name, due_date, priority, notes, category) {
+  // Create a new object to store the task's information
+  let newTask = {
+    name: name,
+    due_date: due_date,
+    priority: priority,
+    notes: notes,
+    completed: false,
+    category: category,
+  };
+
+  tasks.push(newTask);
+
+  console.log("New Task " + name + "Has been Added");
+}
+addTask(
+  "Study Javascript",
+  "2023-03-24",
+  2,
+  "Remember to buy milk, bread, and eggs",
+  "Microsoft"
+);
+
