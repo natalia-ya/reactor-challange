@@ -87,3 +87,19 @@ addTask(
   "Microsoft"
 );
 
+// Statements
+if (task_priority >= 3) {
+  console.log("This is a high priority task.");
+}
+if (task_name.includes("important")) {
+  task_priority = 3;
+}
+if (task_category === "Personal") {
+  task_completed = true;
+}
+let now = new Date();
+let task_due_date_obj = new Date(task_due_date);
+
+if (task_due_date_obj.getTime() - now.getTime() <= 3 * 24 * 60 * 60 * 1000) {
+  console.log("This task is due soon.");
+}
